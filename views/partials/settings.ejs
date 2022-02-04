@@ -1,9 +1,17 @@
-<section class="container d-none" id="settings">
-    <div class="row justify-content-between mx-0">
+<section class="container d-none mt-5 min-vh-100" id="settings">
+    <div class="my-5">
+        <h1 class="text-white text-center">Mời Bạn Bè vào link này</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="gameLink" class="form-control text-center fw-bold bg-white"
+                value="http://localhost:3000/" readonly>
+            <button class="btn btn-warning" type="button" id="copy">Sao chép</button>
+        </div>
+    </div>
+    <div class="row justify-content-between mx-0 my-5">
         <div class="col-md-6 order-2 order-md-0 bg-white rounded h-100 p-3">
             <h1 class="text-center">Cài đặt</h1>
             <div class="input-group mb-3">
-                <label class="input-group-text" for="rounds">Rounds</label>
+                <label class="input-group-text" for="rounds">Số lượt chơi</label>
                 <select class="form-select" id="rounds">
                     <option value="2" selected>2</option>
                     <option value="3">3</option>
@@ -44,33 +52,26 @@
                 <select id="language" class="form-select">
                     <option value="English" selected>English</option>
                 
-                    <option value="vietnamese">Tiếng Việt</option>
+                    <option value="vietnamese" >Tiếng Việt</option>
                 </select>
             </div>
             <% if(!roomID) { %>
             <div class="input-group mb-3">
-                <label class="input-group-text" for="customeWords">Custom Word</label>
+                <label class="input-group-text" for="customeWords">Thêm từ chỉ định</label>
                 <textarea class="form-control" placeholder="word1&#10;word2&#10;word3" id="customWords"
                     style="height: 20vh; resize:none"></textarea>
             </div>
             <div class="mb-3">
-                <label for="probability" class="form-label">Custom words probability</label>
+                <label for="probability" class="form-label">Xác suất từ tùy chỉnh</label>
                 <input type="range" class="form-range" min="0" max="1" step="0.01" id="probability">
             </div>
             <% } %>
             <button class="btn btn-primary w-100" id="startGame">Bắt đầu</button>
         </div>
         <div class="col-md-6 text-white h-100 p-3">
-            <h1 class="text-center">Players</h1>
+            <h1 class="text-center">Người chơi</h1>
             <div class="row mt-4 mx-0" style="height: 20em; overflow-y: auto;" id="playersDiv"></div>
         </div>
     </div>
-    <div class="mt-5">
-        <h1 class="text-white text-center">Mời Bạn Bè vào link này</h1>
-        <div class="input-group mb-3">
-            <input type="text" id="gameLink" class="form-control text-center fw-bold bg-white"
-                value="http://localhost:3000/" readonly>
-            <button class="btn btn-warning" type="button" id="copy">Sao chép</button>
-        </div>
-    </div>
+    
 </section>

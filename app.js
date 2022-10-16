@@ -8,7 +8,4 @@ app.get('/', (req, res) => {
     const roomID = req.query.id;
     res.render('index', { roomID });
 });
-setInterval(function () {
-    http.get("http://draw.huuhieu.name.vn/");
-  }, 3000); // every 5 minutes (300000)
 module.exports = app;
